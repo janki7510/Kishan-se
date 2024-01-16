@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+
 class TDeviceUtils{
+
   static void hideKeyboard(BuildContext context){
     FocusScope.of(context).requestFocus(FocusNode());
   }
@@ -16,15 +18,15 @@ class TDeviceUtils{
     );
   }
 
- /* static bool isLandscapeOrientation(BuildContext context){
-    final viewInsets = View.of(context).viewInsets;
+  static bool isLandscapeOrientation(BuildContext context){
+    final viewInsets = MediaQuery.of(context).viewInsets;
     return viewInsets.bottom == 0;
   }
 
   static bool isPortraitOrientation(BuildContext context){
-    final viewInsets = View.of(context).viewInsets;
+    final viewInsets = MediaQuery.of(context).viewInsets;
     return viewInsets.bottom != 0;
-  }*/
+  }
 
   static void setFullScreen(bool enable){
     SystemChrome.setEnabledSystemUIMode(enable ? SystemUiMode.immersiveSticky: SystemUiMode.edgeToEdge);
@@ -34,7 +36,7 @@ class TDeviceUtils{
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double getScreenWidth(){
+  static double getScreenWidth(BuildContext context){
     return MediaQuery.of(Get.context!).size.width;
   }
 
@@ -46,23 +48,23 @@ class TDeviceUtils{
     return MediaQuery.of(Get.context!).padding.top;
   }
 
-/*  static double getBottomNavigationBarHeight(){
-    return KBottomNavigationBarHeight;
+  static double getBottomNavigationBarHeight(){
+    return kBottomNavigationBarHeight;
   }
 
-  static double getApBarHeight(){
-    return KToolbarHeight;
-  }*/
+  static double getAppBarHeight(){
+    return kToolbarHeight;
+  }
 
   static double getKeyboardHeight(){
     final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom;
   }
 
- /* static Future<bool> isKeyboardVisible() async{
-    final viewInsets = View.of(Get.context!).viewInsets;
+  static Future<bool> isKeyboardVisible() async{
+    final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom > 0;
-  }*/
+  }
 
   static Future<bool> isPhysicalDevice() async{
     return defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS;

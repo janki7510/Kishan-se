@@ -4,7 +4,7 @@ class TLoggerHelper{
   static final Logger _logger = Logger(
     printer: PrettyPrinter(),
   //Customize the log levels based on your needs
-  level: level.debug,
+  level: Level.debug,
   );
 
   static void debug(String message){
@@ -12,14 +12,14 @@ class TLoggerHelper{
   }
 
   static void info(String message){
-    _logger.W(message);
+    _logger.w(message);
   }
 
   static void warning(String message){
-    _logger.W(message);
+    _logger.w(message);
   }
 
   static void error(String message, [dynamic error]){
-    _logger.e(message, error: error, statckTrace: StackTrace.current);
+    _logger.e(message, error: error, stackTrace: StackTrace.current);
   }
 }

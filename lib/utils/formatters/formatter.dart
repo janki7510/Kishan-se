@@ -8,7 +8,7 @@ class TFormatter{
    }
 
    static String formatCurrency(double amount){
-     return NumberFormat.currency(local: 'rupees' , symbol:'₹').format(amount);
+     return NumberFormat.currency(locale: 'rupees' , symbol:'₹').format(amount);
    }
 
    static String formatPhoneNumber(String phoneNumber){

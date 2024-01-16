@@ -1,12 +1,12 @@
-import 'dart:js';
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-class THelperFunctions{
+class THelperFunctions {
 
-  static void showSnackBar(String message){
+  static void showSnackBar(String message) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(
         SnackBar(content: Text(message))
     );
@@ -15,7 +15,7 @@ class THelperFunctions{
   static void showAlert(String title, String message) {
     showDialog(
       context: Get.context!,
-      builder: (BuildContext, context) {
+      builder: (BuildContext context) {
         return AlertDialog(
           title: Text(title),
           content: Text(message),
@@ -28,49 +28,58 @@ class THelperFunctions{
         );
       },
     );
+  }
 
- /*  static void navigateToScreen(BuildContext context,Widget screen){
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => screen),
-      );
-    }  */
+  static void navigateToScreen(BuildContext context, Widget screen) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => screen),
+    );
+  }
 
-    static String truncateText(String text, int maxLength){
-      if(text.length <= maxLength){
-        return text;
-     }else{
-        return '${(text.substring(0,maxLength))}...';
-      }
+  static String truncateText(String text, int maxLength) {
+    if (text.length <= maxLength) {
+      return text;
+    } else {
+      return '${(text.substring(0, maxLength))}...';
     }
   }
 
-  static bool isDarkMode(BuildContext context){
-      return Theme.of(context).brightness ==Brightness.dark;
+
+  static bool isDarkMode(BuildContext context) {
+    return Theme
+        .of(context)
+        .brightness == Brightness.dark;
   }
 
-  static double screenHeight(){
-    return MediaQuery.of(Get.context!).size.height;
+  static double screenHeight() {
+    return MediaQuery
+        .of(Get.context!)
+        .size
+        .height;
   }
 
-  static double screenWidth(){
-    return MediaQuery.of(Get.context!).size.width;
+  static double screenWidth() {
+    return MediaQuery
+        .of(Get.context!)
+        .size
+        .width;
   }
 
- /* static String getFormattedDate(DateTime date, {String format = 'dd MMM yyyy'}){
+  /* static String getFormattedDate(DateTime date, {String format = 'dd MMM yyyy'}){
     return DateFormat(format).format(date);
   }*/
 
-  static List<T> removeDuplicates<T>(List<T> list){
+  static List<T> removeDuplicates<T>(List<T> list) {
     return list.toSet().toList();
   }
 
-  static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize){
+  static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
     final wrappedList = <Widget>[];
-    for(var i=0;i<widgets.length;i+=rowSize){
-      final rowChildren = widgets.sublist(i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
+    for (var i = 0; i < widgets.length; i += rowSize) {
+      final rowChildren = widgets.sublist(
+          i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
     }
     return wrappedList;
   }
-
 }
