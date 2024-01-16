@@ -14,6 +14,7 @@ import '../../../../common/widgets/custome_Shapes/curved_edges/curved_edges.dart
 import '../../../../common/widgets/custome_Shapes/curved_edges/curved_edges_widget.dart';
 import '../../../../common/widgets/image/t_rounded_image.dart';
 import '../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
@@ -67,15 +68,16 @@ class HomeScreen extends StatelessWidget {
             ),
             ///Body
              Padding(
-              padding: EdgeInsets.all(TSize.defaultSpace),
+              padding: const EdgeInsets.all(TSize.defaultSpace),
 
               child: Column(
-                 children: const [
+                 children: [
                  /// Promo Slider
-                   TPromoSlider(banner: [TImages.promoBanner1,TImages.promoBanner2,TImages.promoBanner3],),
-                   SizedBox(height: TSize.spaceBtwSections,),
+                   const TPromoSlider(banner: [TImages.promoBanner1,TImages.promoBanner2,TImages.promoBanner3],),
+                   const SizedBox(height: TSize.spaceBtwSections,),
                  ///Popular Products
-                   TProductCardVertical(),
+                   TGridLayout(itemCount: 4, itemBuilder: (_,index) => const TProductCardVertical(),),
+
                  ],
                ),
             ),
@@ -85,6 +87,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
