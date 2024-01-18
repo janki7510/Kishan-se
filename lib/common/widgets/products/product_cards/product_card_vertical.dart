@@ -43,10 +43,10 @@ class TProductCardVertical extends StatelessWidget {
                   TRoundedImage(imageUrl: TImages.grain, applyImageRadius: true,),
 
                   ///Favourite Icon Button
-                  Positioned(
+               /*  Positioned(
                       top: 0,
                       right: 0,
-                      child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red,)),
+                      child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red,)),*/
                 ],
               ),
             ),
