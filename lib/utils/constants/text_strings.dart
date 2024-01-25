@@ -1,12 +1,8 @@
-
 ///This class contains all the App Text in String formats.
 
 class TTexts{
 
   //Global Texts
-  static const String submit = "Submit";
-  static const String appName = "Kishan-Se";
-  static const String tContinue = "Continue";
 
   //OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
@@ -18,42 +14,65 @@ class TTexts{
   static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
 
-  //Authentication Form Text
-  static const String firstName = "First Name";
-  static const String lastName = "Last Name";
-  static const String email = "E-mail";
-  static const String password = "Password";
-  static const String newPassword = "New Password";
-  static const String username = "Username";
-  static const String phoneNo = "Phone Number";
-  static const String rememberMe = "Remember Me";
-  static const String forgetPassword = "Forget Password";
-  static const String signIn = "Sign In";
-  static const String createAccount = "Create Account";
-  static const String orSignInWith = "or sign in with";
-  static const String orSignUpWith = "or sign up with";
-  static const String iAgreeTo = "I agree to";
-  static const String privacyPolicy = "Privacy Policy";
-  static const String termsOfUse = "Terms of use";
-  static const String verificationCode = "verificationCode";
+
+  //Login
+  static const String loginTitle ="Welcome back,";
+  static const String loginSubTitle ="Discover Limitless Choices and Unmatched Convenience";
+  static const String rememberMe ="Remember Me";
+  static const String forgetPassword ="Forgot Password";
+  static const String password ="Password";
+  static const String signIn ="Sign In";
+  static const String createAccount ="Create Account";
+  static const String orSignInWith = "Or Sign In With";
+
+  // signup
+  static const String signupTitle= "Create Your Account";
+  static const String firstname= "First Name";
+  static const String lastname= "Last Name";
+
+  static const String username= "User Name";
+  static const String email= "Email";
+  static const String phoneNumber= "Phone Number";
+  static const String passWord= "Password";
+
+  static const String iagreeTo = "I Agree To";
+  static const String privacyPolicy = "PrivacyPolicy";
+  static const String and = " and ";
+  static const String termsOfUse = "TermsOfUse";
+
+  //verify_email
+  static const String confirmEmail = "Verify Your Email Address!";
+  static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to experience a world of Unrivaled deal and personalized Offers of Agro-products.";
+
+  static const String tContinue = "Continue";
   static const String resendEmail = "Resend Email";
-  static const String resendEmailIn = "Resend email in";
+  static const String yourAccountCreatedTitle = "Your Account Successfully Created!";
+  static const String yourAccountCreatedSubTitle = "Welcome to your ultimate Agro Destination: Your Account is Created. Unleash the joy of Seamless Online Countryside Agro-products!";
 
-  //Authentication Heading Text
-  static const String loginTitle = "Welcome back";
-  static const String loginSubTitle = "Discover Limitless Choice";
-  static const String signupTitle = "Let's create your account";
-  static const String forgetPasswordTitle = "Forget password";
-  static const String forgetPasswordSubTitle = "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link";
-  static const String changeYourPasswordTitle = "Password Rest Email Send";
-  static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent You a Secure Link a Safely Change Your Password and Keep Your Account Protected. ";
-  static const String confirmEmail = "Verify your email address!";
-  static const String confirmEmailSubTitle = "Congratulation! Your Account Awaits : Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals andPersonalized Offers.";
-  static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
-  static const String yourAccountCreatedTitle = "Your account successfully created!";
-  static const String yourAccountCreatedSubTitle = "Welcome to Your Ultimate Shopping Destination: Your Account is Create, Unless the Joy of Seamless Online Shopping!";
+  // forget & Reset password
+  static const String forgetPasswordTitle = "Forget Password";
+  static const String forgetPasswordSubTitle = "Don't Worry! We are here to solve your issue.";
+  static const String submit = "Submit";
 
-  //Home
-  static const String homeAppbarTitle = "Good day for shopping";
-  static const String homeAppbarSubTitle = "Kishan-Se";
+
+
+
+  static const String changeYourPasswordTitle = "Password Reset Email Sent!";
+  static const String changeYourPasswordSubTitle = "Your Account Security is our Priority! We've sent you a secure link to safely change your Password and keep your account protected.";
+  static const String done = "Done";
+
+  //-- Home
+  static const String homeAppBarTitle = "Kishan Se, Khushi Mile!! ✊✊";
+  static const String homeAppBarSubTitle = "Shop! Round The Clock";
+
+
+
+
+
+
+
+
+
+
+
 }

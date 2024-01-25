@@ -11,13 +11,17 @@ class THomeCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 85,
+      height: 80,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 5,
+        itemCount: 15,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return  TVerticalImageText(image: TImages.fruits, title: 'Fruits',onTap:(){});
+          return TVerticalImageText(
+            image: TImages.pulsesIcon,
+            title: 'Pulses',
+            onTap: () {},
+          );
         },
       ),
     );

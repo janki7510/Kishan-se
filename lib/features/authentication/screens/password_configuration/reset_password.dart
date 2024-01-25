@@ -1,55 +1,53 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:kishan_se/utils/constants/size.dart';
+import 'package:kishan_se/utils/helpers/helper_functions.dart';
 
 import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/size.dart';
 import '../../../../utils/constants/text_strings.dart';
-import '../../../../utils/helpers/helper_functions.dart';
 
-class ResetPassword extends StatelessWidget {
+
+class ResetPassword extends StatelessWidget{
   const ResetPassword({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
           IconButton(onPressed: () => Get.back(), icon: const Icon(CupertinoIcons.clear))
         ],
-      ),
-      body: SingleChildScrollView(
+    ),
+      body:  SingleChildScrollView(
         child: Padding(
-            padding: EdgeInsets.all(TSize.defaultSpace),
-            child: Column(
-              children: [
-                ///Image
-                Image(image: const AssetImage(TImages.forgotpw),width: THelperFunctions.screenWidth(),),
-                const SizedBox(height: TSize.spaceBtwItems,),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
+            children: [
 
-                ///Title & SubTitle
-                Text(TTexts.changeYourPasswordTitle,style: Theme.of(context).textTheme.headlineMedium,textAlign: TextAlign.center,),
-                const SizedBox(height: TSize.spaceBtwItems,),
-                Text(TTexts.changeYourPasswordSubTitle,style: Theme.of(context).textTheme.labelMedium,textAlign: TextAlign.center,),
-                const SizedBox(height: TSize.spaceBtwItems,),
+              /// Image
+              Image(image: const AssetImage(TImages.deliveredEmailIllustration), width: THelperFunctions.screenWidth() * 0.6),
+              const SizedBox(height: TSizes.spaceBtwSections),
 
-                ///Buttons
-                SizedBox(width: double.infinity,
-                  child: ElevatedButton(onPressed: (){} ,child: const Text('Done'),),),
+              /// Title & SubTitle
+              Text(TTexts.changeYourPasswordTitle, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              Text(TTexts.changeYourPasswordSubTitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
+              const SizedBox(height: TSizes.spaceBtwSections),
 
-                const SizedBox(height: TSize.spaceBtwItems,),
+              /// Button
+              SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){}, child: const Text(TTexts.done)),
 
-                SizedBox(width: double.infinity,
-                  child: TextButton(onPressed: (){} ,child: const Text(TTexts.resendEmail),),),
-
-
-
-              ],
+              ),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              SizedBox(width: double.infinity, child: TextButton(onPressed: (){}, child: const Text(TTexts.resendEmail)),
+              ),
+          ],
+          ),
         ),
       ),
-      ),
+
     );
   }
 }

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/size.dart';
-import '../products/product_cards/product_card_vertical.dart';
+//import '../products/product_cards/product_card_vertical.dart';
 
 class TGridLayout extends StatelessWidget {
   const TGridLayout({
-    super.key, required this.itemCount, this.mainAxisExtent = 288, required this.itemBuilder,
-
+    super.key,
+    required this.itemCount,
+    this.mainAxisExtent = 288,
+    required this.itemBuilder,
   });
 
   final int itemCount;
@@ -23,9 +25,10 @@ class TGridLayout extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisExtent: mainAxisExtent,
-        mainAxisSpacing: TSize.gridViewSpacing,
-        crossAxisSpacing: TSize.gridViewSpacing,
-        ),
-      itemBuilder: itemBuilder,);
+        mainAxisSpacing: TSizes.gridViewSpacing,
+        crossAxisSpacing: TSizes.gridViewSpacing,
+      ),
+      itemBuilder: itemBuilder,
+    );
   }
 }

@@ -4,9 +4,9 @@ class TColors{
   TColors._();
 
   //App Basic Colors
-  static const Color primary = Color(0xFF90EE90);
-  static const Color secondary = Color(0xFFFF9966);
-  static const Color accent = Color(0xFFb0c7ff);
+  static const Color primary = Color(0xFF4CAF50);
+  static const Color secondary = Color(0xFFFFE24B);
+  static const Color accent = Color(0xFFC1FBC3);
 
   //Gradient Colors
   static const Gradient linerGradient = LinearGradient(
@@ -33,7 +33,7 @@ class TColors{
   static Color darkContainer = TColors.textWhite.withOpacity(0.1);
 
   //Button Colors
-  static const Color buttonPrimary = Color(0xFF4b68ff);
+  static const Color buttonPrimary = Color(0xFF4CAF50);
   static const Color buttonSecondary = Color(0xFF6C757D);
   static const Color buttonDisabled = Color(0xFFC4C4C4);
 

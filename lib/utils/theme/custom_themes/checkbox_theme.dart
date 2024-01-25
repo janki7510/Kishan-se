@@ -20,7 +20,7 @@ class TCheckboxTheme{
    fillColor: MaterialStateProperty.resolveWith((states)
    {
      if(states.contains(MaterialState.selected)){
-       return Colors.blue;
+       return Colors.green;
      }else{
        return Colors.transparent;
      }
@@ -40,7 +40,7 @@ class TCheckboxTheme{
     fillColor: MaterialStateProperty.resolveWith((states)
     {
       if(states.contains(MaterialState.selected)){
-        return Colors.blue;
+        return Colors.green;
       }else{
         return Colors.transparent;
       }
