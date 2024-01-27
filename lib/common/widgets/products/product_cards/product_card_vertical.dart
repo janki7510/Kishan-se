@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:kishan_se/common/widgets/products/product_cards/product_price_text.dart';
 import 'package:kishan_se/utils/constants/colors.dart';
@@ -69,12 +70,14 @@ class TProductCardVertical extends StatelessWidget {
                     ],
                   ),
 
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ///Price
                       const TProductPriceText(price: '24/kg',),
 
+                      ///Add to Cart Button
                       Container(
                         decoration: const BoxDecoration(
                           color: TColors.dark,

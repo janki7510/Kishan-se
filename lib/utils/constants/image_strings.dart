@@ -46,6 +46,7 @@ class TImages {
   static const String jute="assets/images/productimages/jute.png";
   static const String turmeric="assets/images/productimages/turmeric.png";
   static const String potato="assets/images/productimages/potato.png";
+  static const String kidneyBeen = "assets/images/productimages/Kidney bean.jpg";
 
 // Payment Methods
 static const String applePay = "assets/icons/payment_methods/applePay.png";
